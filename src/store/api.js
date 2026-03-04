@@ -1,0 +1,10 @@
+import axios from 'axios';
+
+const API_URL = 'http://localhost:3001';
+
+export const api = {
+  getCourses: () => axios.get(`${API_URL}/courses`),
+  createCourse: (data) => axios.post(`${API_URL}/courses`, data),
+  getModules: () => axios.get(`${API_URL}/modules`),
+  createModule: (data) => axios.post(`${API_URL}/modules`, data),
+};

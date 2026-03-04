@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: #2d3748;
+}
+
+.MuiContainer-root {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.MuiCard-root {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.MuiButton-contained {
+  background: linear-gradient(135deg, #ea6666 0%, #a24b96 100%);
+  transition: all 0.3s ease;
+}
+
+.MuiButton-contained:hover {
+  background: linear-gradient(135deg, #a24b96 0%, #ea6666 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.MuiButton-outlined {
+  border: 2px solid #ea6666;
+  color: #ea6666;
+  transition: all 0.3s ease;
+}
+
+.MuiButton-outlined:hover {
+  background: #ea6666;
+  color: white;
+}
+
+.MuiTextField-root {
+  background: white;
+  border-radius: 8px;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.MuiOutlinedInput-root:hover {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.25);
+}
+
+.form-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.form-card-header {
+  background: linear-gradient(135deg, #fa8282 0%, #a24b83 100%);
+  color: white;
+  padding: 24px;
+}
+
+.MuiList-root {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.MuiListItem-root {
+  transition: background 0.2s ease;
+}
+
+.MuiListItem-root:hover {
+  background: #f5f7fa;
+}
+
+.MuiAlert-root {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
