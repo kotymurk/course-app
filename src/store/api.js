@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = '[https://my-json-server.typicode.com/kotymurk/course-app](https://my-json-server.typicode.com/kotymurk/course-app)';
 
 export const api = {
   getCourses: () => axios.get(`${API_URL}/courses`),
