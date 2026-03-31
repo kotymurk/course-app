@@ -1,16 +1,40 @@
-# React + Vite
+Course App — Система управления образовательными курсами
+​Приложение на стеке React/Redux для организации учебного процесса. Позволяет просматривать каталог курсов, изучать их содержание, а также динамически создавать новые учебные направления и добавлять к ним образовательные модули.
+​Функциональные возможности
+​Каталог курсов: Отображение списка доступных программ с использованием сетки карточек.
+​Просмотр деталей: Переход на страницу конкретного курса с отображением всех связанных модулей.
+​Создание курсов: Форма добавления нового курса с указанием названия, описания и обложки.
+​Управление модулями: Возможность расширения программы обучения через добавление новых модулей к существующим курсам.
+​Интерактивный интерфейс: Адаптивные компоненты и индикаторы загрузки.
+​Технологический стек
+​Библиотека: React 18 (Vite)
+​Управление состоянием: Redux Toolkit (использование createAsyncThunk для работы с API)
+​Маршрутизация: React Router DOM v6
+​Интерфейс: Material UI (MUI)
+​Бэкенд: JSON Server (REST API эмуляция)
+​HTTP-клиент: Axios
+​Инструкция по установке и запуску
+​Для работы приложения требуется установленная среда Node.js.
+​1. Клонирование репозитория
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`git clone https://github.com/kotymurk/course-app.git`
+`cd course-app` 2. Установка зависимостей
+`npm install` 3. Запуск серверов
+​Для работы приложения необходимо одновременно запустить API-сервер и клиентскую часть.
+​Запуск базы данных (JSON Server):
+В первом терминале выполните:
+`npm run server`
+Сервер будет запущен на порту 3001.
+​Запуск клиентской части (Vite):
+Во втором терминале выполните:
+`npm run dev`
+Приложение будет доступно по адресу: `http://localhost:5173`
+​Структура проекта
+​src/pages/ — компоненты страниц: CourseList (каталог), CourseDetail (детали), CreateCourse (создание).
+​src/store/ — конфигурация Redux Store и слайсы (coursesSlice) для обработки асинхронных запросов.
+​src/components/ — переиспользуемые компоненты интерфейса (карточки, формы).
+​db.json — файл базы данных, содержащий массивы курсов и модулей.
+​Рекомендации по использованию
+​Работа с изображениями: При создании курса рекомендуется использовать прямые ссылки на изображения. Если доступ к изображениям ограничен, убедитесь в наличии стабильного интернет-соединения или активного VPN-подключения.
+​API эндпоинты: Приложение ожидает наличие эндпоинтов /courses и /modules на локальном сервере.
+​Добавление данных: Все изменения, внесенные через интерфейс (создание курса или модуля), сохраняются напрямую в файл db.json в режиме реального времени.
